@@ -1,0 +1,48 @@
+.contentbox {
+	background-color: #1f1f1f;
+}
+
+.content {
+	display: inline-block;
+	color: #ffffff;
+}
+
+#detail {
+	vertical-align: top;
+}
+
+#img {
+}
+
+html{
+	background-color: #1f1f1f;
+}
+
+.title-text {
+	word-break: break-word;
+}
+
+.box {
+	width: 800px;
+	height: 189px;
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
+	margin: 10px 10;
+	padding: 10px;
+}
+
+.inner-video {
+	width: 336px;
+	height: 189px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.inner-text {
+	width: 464px;
+	height: 189px;
+	display: inline-block;
+	vertical-align: top;
+	margin:0 10px;
+}
