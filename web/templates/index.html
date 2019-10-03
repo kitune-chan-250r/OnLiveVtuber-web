@@ -12,8 +12,11 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-3 hidden-xs">
-      </div>
+      <!-- <div class="col-lg-3 hidden-xs">
+      </div> -->
+      <nav class="navbar navbar-inverse navbar-fixed-left col-lg-3 hidden-xs">
+        
+      </nav>
       <div class="col-lg-6">
         {% if livedata %}
           {% for d in livedata %}
@@ -26,9 +29,10 @@
                 </div>
                 <div class='col-xs-12 col-lg-6'>
                   <div class='content' id='detail'>
-                    <h5 class='title-text'>{{ d.live_title }} </h5>
-                    <p>Vtuber: {{ d.liver_name }}</p>
-                    <a href='https://www.youtube.com/watch?v={{ d.live_url }}' target="_blank">配信場所</a>
+                    <h5 class='title-text'>
+                      <a href='https://www.youtube.com/watch?v={{ d.live_url }}' target="_blank">{{ d.live_title }}</a>
+                    </h5>
+                    <p class="name">Vtuber: {{ d.liver_name }}</p>
                   </div>
                 </div>
               </div>
@@ -38,7 +42,7 @@
           <p class='errmsg'>配信してるVtuberはいませんでした</p>
         {% endif %}
       </div>
-      <div class="col-lg-3 hidden-xs">
+      <div class="col-lg-3 hidden-xs right">
       </div>
     </div>
   </div>

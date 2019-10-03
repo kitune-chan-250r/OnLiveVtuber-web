@@ -10,7 +10,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 .content {
 	color: #ffffff;
 }
@@ -37,3 +36,25 @@ body {
 	color: #ffffff;
 }
 
+a {
+	color: #ffffff;
+}
+a:link{color: #ffff; text-decoration: none;}
+a:visited{color: #ffff; text-decoration: none;}
+a:active{color: #ffff; text-decoration: none;}
+a:hover{color: #ffff; text-decoration: none;}
+
+
+.name {
+	color: #aaaaaa;
+}
+
+nav {
+	background-color: #282828;
+	height: 100vh;
+}
+
+.right{
+	background-color: #282828;
+	height: 100vh;
+}
