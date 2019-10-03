@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>OnliveVtuber</title>
-    {% load static %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery='full' %}
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
   <div class="container-fluid">
     <div class="row">
       <!-- <div class="col-lg-3 hidden-xs">
       </div> -->
-      <nav class="col-lg-3 hidden-md sidebar" id='l'>
-      </nav>
+      <div class="col-lg-3 hidden-md sidebar" id='l'>
+      </div>
       <div class="col-lg-6">
+        <br>
+        <br>
         {% if livedata %}
           {% for d in livedata %}
             <div class='cardw'>
@@ -41,9 +33,7 @@
           <p class='errmsg'>配信してるVtuberはいませんでした</p>
         {% endif %}
       </div>
-      <nav class="col-lg-3 hidden-md sidebar" id='r'>
-      </nav>
+      <div class="col-lg-3 hidden-md sidebar" id='r'></div>
     </div>
   </div>
-</body>
-</html>
+{% endblock %}

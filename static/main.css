@@ -60,3 +60,17 @@ a:hover{color: #ffff; text-decoration: none;}
 	#r{background-color:#161616;}
 	#l{background-color:#282828;}
 }
+
+nav {
+	text-align: center;
+	color: #ffffff;
+	background-color:#282828;
+}
+
+#text-white {
+	color: #ffffff;
+}
+
+.logo {
+	text-align: center;
+}
