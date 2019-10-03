@@ -17,23 +17,6 @@ def index(request):
                          'gender': i['uid']['gender'],
                          'production': i['uid']['production']})
 
-
-    #testdata
-    livedata.append({'liver_name': "testdata",
-                     'live_url': "PWfXvA3E2fo",
-                     'live_title': "【クレヨンしんちゃん】ぽんこつ園児の団長がっょっょ目指して冒険だ～！【ホロライブ/白銀ノエル】", #10文字
-                     'start_time': "00:00:00",
-                     'gender': "male",
-                     'production': "hololive"})
-    livedata.append({'liver_name': "testdata",
-                     'live_url': "PWfXvA3E2fo",
-                     'live_title': "【クレヨンしんちゃん】ぽんこつ園児の団長がっょっょ目指して冒険だ～！【ホロライブ/白銀ノエル】", #10文字
-                     'start_time': "00:00:00",
-                     'gender': "male",
-                     'production': "hololive"})
-    
-    data['livedata'] = livedata
-
     print(data)
     return render(request, 'index.html', data)
 
