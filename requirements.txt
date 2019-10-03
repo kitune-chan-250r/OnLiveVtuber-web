@@ -7,4 +7,5 @@ djangorestframework==3.9.4
 Pillow==6.0.0
 requests==2.21.0
 gunicorn
+dj_static
 beautifulsoup4==4.6.0
