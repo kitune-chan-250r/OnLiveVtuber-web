@@ -17,6 +17,7 @@ def index(request):
                          'gender': i['uid']['gender'],
                          'production': i['uid']['production']})
 
+    data['livedata'] = livedata
     print(data)
     return render(request, 'index.html', data)
 
