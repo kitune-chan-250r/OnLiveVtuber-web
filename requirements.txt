@@ -9,3 +9,4 @@ requests==2.21.0
 gunicorn
 beautifulsoup4==4.6.0
 django-bootstrap4==1.0.1
+beautifulsoup4==4.6.0
