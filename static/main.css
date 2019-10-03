@@ -56,4 +56,7 @@ a:hover{color: #ffff; text-decoration: none;}
 		position: sticky;
 		top: 0;
 	}
+
+	#r{background-color:#161616;}
+	#l{background-color:#282828;}
 }
