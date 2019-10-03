@@ -44,17 +44,15 @@ a:visited{color: #ffff; text-decoration: none;}
 a:active{color: #ffff; text-decoration: none;}
 a:hover{color: #ffff; text-decoration: none;}
 
-
 .name {
 	color: #aaaaaa;
 }
 
-nav {
-	background-color: #282828;
-	height: 100vh;
-}
-
-.right{
-	background-color: #282828;
-	height: 100vh;
+@media (min-width: 992px) {
+	.sidebar {
+		background-color: #282828;
+		height: 100vh;
+		position: sticky;
+		top: 0;
+	}
 }
