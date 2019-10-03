@@ -1,0 +1,1 @@
+web: gunicorn onlive_vtuber_web.wsgi

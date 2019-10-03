@@ -1,32 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>OnliveVtuber</title>
-    {% load static %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery='full' %}
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-</head>
-<body>
-    <div class="index">
-        	{% if livedata %}
-        		{% for d in livedata %}
-        		<div class='card'>
-                    <div class='contentbox'>
-                        <div class='content' id='img'>
-                            <iframe width="336" height="189" src="https://www.youtube.com/embed/{{ d.live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class='content' id='detail'>
-                            <p class='title-text'>{{ d.live_title }} </p>
-                            <p>Vtuber: {{ d.liver_name }}</p>
-                            <a href='https://www.youtube.com/watch?v={{ d.live_url }}' target="_blank">配信場所</a>
-                        </div>
-                    </div>
-        		</div>
-        		{% endfor %}
-        	{% else %}
-        		<p>配信してるVtuberはいませんでした</p>
-        	{% endif %}
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <!-- <div class="col-lg-3 hidden-xs">
+      </div> -->
+      <div class="col-lg-3 hidden-md sidebar" id='l'>
+      </div>
+      <div class="col-lg-6">
+        <br>
+        <br>
+        {% if livedata %}
+          {% for d in livedata %}
+            <div class='cardw'>
+              <div class='row contentbox'>
+                <div class='col-xs-12 col-lg-6'>
+                  <div class='content' id='img'>
+                    <iframe width="336" height="189" src="https://www.youtube.com/embed/{{ d.live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class='col-xs-12 col-lg-6'>
+                  <div class='content' id='detail'>
+                    <h5 class='title-text'>
+                      <a href='https://www.youtube.com/watch?v={{ d.live_url }}' target="_blank">{{ d.live_title }}</a>
+                    </h5>
+                    <p class="name">Vtuber: {{ d.liver_name }}</p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- card end -->
+          {% endfor %}
+        {% else %}
+          <p class='errmsg'>配信してるVtuberはいませんでした</p>
+        {% endif %}
+      </div>
+      <div class="col-lg-3 hidden-md sidebar" id='r'></div>
     </div>
-</body>
-</html>
+  </div>
+{% endblock %}

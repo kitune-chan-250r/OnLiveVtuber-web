@@ -1,9 +1,16 @@
 .contentbox {
 	background-color: #1f1f1f;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
 }
-
+/*一部padding,margineを削除*/
+.contentbox > .col,
+.contentbox > [class*="col-"]{
+	margin: 0;
+	padding: 0;
+}
 .content {
-	display: inline-block;
 	color: #ffffff;
 }
 
@@ -12,9 +19,11 @@
 }
 
 #img {
+	text-align: center;
 }
 
-html{
+
+body {
 	background-color: #1f1f1f;
 }
 
@@ -22,27 +31,46 @@ html{
 	word-break: break-word;
 }
 
-.box {
-	width: 800px;
-	height: 189px;
-	display: table-cell;
-	position: relative;
-	vertical-align: middle;
-	margin: 10px 10;
-	padding: 10px;
+.errmsg {
+	background-color: #1f1f1f;
+	text-align: center;
+	color: #ffffff;
 }
 
-.inner-video {
-	width: 336px;
-	height: 189px;
-	display: inline-block;
-	vertical-align: middle;
+a {
+	color: #ffffff;
+}
+a:link{color: #ffff; text-decoration: none;}
+a:visited{color: #ffff; text-decoration: none;}
+a:active{color: #ffff; text-decoration: none;}
+a:hover{color: #ffff; text-decoration: none;}
+
+.name {
+	color: #aaaaaa;
 }
 
-.inner-text {
-	width: 464px;
-	height: 189px;
-	display: inline-block;
-	vertical-align: top;
-	margin:0 10px;
+@media (min-width: 992px) {
+	.sidebar {
+		background-color: #282828;
+		height: 100vh;
+		position: sticky;
+		top: 0;
+	}
+
+	#r{background-color:#161616;}
+	#l{background-color:#282828;}
+}
+
+nav {
+	text-align: center;
+	color: #ffffff;
+	background-color:#282828;
+}
+
+#text-white {
+	color: #ffffff;
+}
+
+.logo {
+	text-align: center;
 }
