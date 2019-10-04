@@ -29,6 +29,7 @@ body {
 
 .title-text {
 	word-break: break-word;
+	color: #ffffff;
 }
 
 .errmsg {
@@ -37,13 +38,11 @@ body {
 	color: #ffffff;
 }
 
-a {
-	color: #ffffff;
-}
-a:link{color: #ffff; text-decoration: none;}
-a:visited{color: #ffff; text-decoration: none;}
-a:active{color: #ffff; text-decoration: none;}
-a:hover{color: #ffff; text-decoration: none;}
+
+.title-text:link{color: #ffff; text-decoration: none;}
+.title-text:visited{color: #ffff; text-decoration: none;}
+.title-text:active{color: #ffff; text-decoration: none;}
+.title-text:hover{color: #ffff; text-decoration: none;}
 
 .name {
 	color: #aaaaaa;
@@ -71,6 +70,20 @@ nav {
 	color: #ffffff;
 }
 
-.logo {
+.logo,
+.filter {
 	text-align: center;
 }
+
+.dropdown-toggle,
+.dropdown-menu.show {
+	background-color:#3e3e3e;
+	text-align: center;
+}
+
+.dropdown{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+

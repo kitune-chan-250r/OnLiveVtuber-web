@@ -10,30 +10,58 @@
         <br>
         <br>
         {% if livedata %}
-          {% for d in livedata %}
-            <div class='cardw'>
-              <div class='row contentbox'>
-                <div class='col-xs-12 col-lg-6'>
-                  <div class='content' id='img'>
-                    <iframe width="336" height="189" src="https://www.youtube.com/embed/{{ d.live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class='col-xs-12 col-lg-6'>
-                  <div class='content' id='detail'>
-                    <h5 class='title-text'>
-                      <a href='https://www.youtube.com/watch?v={{ d.live_url }}' target="_blank">{{ d.live_title }}</a>
-                    </h5>
-                    <p class="name">Vtuber: {{ d.liver_name }}</p>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- card end -->
+          {% for d in livedata reversed %}
+            {% if request.GET.filter == "1" %}
+              {% ifequal d.production 'ホロライブ' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
+
+            {% elif request.GET.filter == "2" %}
+              {% ifequal d.production 'にじさんじ' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
+
+            {% elif request.GET.filter == "3" %}
+              {% ifequal d.production 'upd8' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
+
+            {% elif request.GET.filter == "4" %}
+              {% ifequal d.production '.Live' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
+            
+            {% else %}
+              {% include "content_box.html" %}
+            {% endif %}
+          
           {% endfor %}
         {% else %}
           <p class='errmsg'>配信してるVtuberはいませんでした</p>
         {% endif %}
       </div>
-      <div class="col-lg-3 hidden-md sidebar" id='r'></div>
+
+      <div class="col-lg-3 hidden-md sidebar" id='r'>
+        <div class="container">
+          <div class="row">
+            <div class="dropdown d-none d-sm-block mx-auto"> <!-- スマホ画面で非表示　d-none d-sm-block / 逆に表示する場合 d-block d-sm-none-->
+              <button class="btn btn-ins btn-lg dropdown-toggle d-none d-sm-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                フィルターを選択
+                <span class="caret "></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/?filter=1" class="filter title-text">ホロライブ</a></li>
+                <li><a href="/?filter=2" class="filter title-text">にじさんじ</a></li>
+                <li><a href="/?filter=3" class="filter title-text">upd8</a></li>
+                <li><a href="/?filter=4" class="filter title-text">.Live</a></li>
+                <li><a href="/" class="filter title-text">フィルターを解除</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr width="120px" color="red">
+      </div>
+    
     </div>
   </div>
 {% endblock %}
