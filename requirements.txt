@@ -11,4 +11,4 @@ dj_static
 beautifulsoup4==4.6.0
 django-bootstrap4==1.0.1
 beautifulsoup4==4.6.0
-
+whitenoise==4.1.2
