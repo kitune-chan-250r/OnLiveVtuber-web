@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '84u04z!#7scgw)c36*2+y0$!dqn4plowsg18k!7l2go4+6m5+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
+DEBUG = True
 
 
 
@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_blog.context_processors.google_analytics', 
             ],
             'builtins':[ 
                 'bootstrap4.templatetags.bootstrap4',
@@ -135,3 +136,5 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
