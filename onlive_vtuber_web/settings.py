@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django_blog.context_processors.google_analytics', 
+                'onlive_vtuber_web.context_processors.google_analytics', 
             ],
             'builtins':[ 
                 'bootstrap4.templatetags.bootstrap4',
