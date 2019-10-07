@@ -72,7 +72,8 @@ nav {
 }
 
 .logo,
-.filter{
+.filter,
+.filter-text {
 	text-align: center;
 }
 
@@ -85,33 +86,4 @@ nav {
 .dropdown{
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-
-.filter-text{
-	color: #ffffff;
-	text-align: center;
-}
-
-.btnleft{
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	margin-top: 13px;
-}
-
-.btncolor{
-	background-color: #3e3e3e; 
-	text-transform: none !important;
-}
-
-#all{
-	background-color: #1f1f1f;
-}
-
-.d{
-	text-align: center;
-}
-
-.comment{
-	color: #8899a6;
 }
