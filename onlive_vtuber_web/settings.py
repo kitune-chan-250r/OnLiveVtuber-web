@@ -67,9 +67,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'onlive_vtuber_web.context_processors.google_analytics', 
+                'onlive_vtuber_web.context_processors.google_analytics',
             ],
-            'builtins':[ 
+            'builtins':[
                 'bootstrap4.templatetags.bootstrap4',
             ],
         },
@@ -137,4 +137,4 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
+#GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
