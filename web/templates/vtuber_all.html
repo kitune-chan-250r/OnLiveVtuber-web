@@ -23,7 +23,7 @@
               {% endifequal %}
 
             {% elif request.GET.filter == "3" %}
-              {% ifequal v.production 'upd8' %}
+              {% ifequal v.production 'あにまーれ' %}
                 {% include "v_content.html" %}
               {% endifequal %}
 
@@ -51,7 +51,7 @@
             {% elif request.GET.filter == "2" %}
               <p class="filter-text">現在選択中のフィルター：にじさんじ</p>
             {% elif request.GET.filter == "3" %}
-              <p class="filter-text">現在選択中のフィルター：upd8</p>
+              <p class="filter-text">現在選択中のフィルター：あにまーれ</p>
             {% elif request.GET.filter == "4" %}
               <p class="filter-text">現在選択中のフィルター：.Live</p>
             {% endif %}
@@ -64,7 +64,7 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a href="/vtuber?filter=1" class="filter title-text">ホロライブ</a></li>
                 <li><a href="/vtuber?filter=2" class="filter title-text">にじさんじ</a></li>
-                <li><a href="/vtuber?filter=3" class="filter title-text">upd8</a></li>
+                <li><a href="/vtuber?filter=3" class="filter title-text">あにまーれ</a></li>
                 <li><a href="/vtuber?filter=4" class="filter title-text">.Live</a></li>
               </ul>
             </div>
