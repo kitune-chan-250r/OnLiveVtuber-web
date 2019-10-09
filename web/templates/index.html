@@ -42,22 +42,22 @@
       </div>
 
       <div class="col-lg-3 hidden-md sidebar" id='r'>
-        <div class="container">
+        <div class="container d-none d-sm-block">
           <br>
           <br>
             {% if request.GET.filter == "1" %}
-              <p class="filter-text">現在選択中のフィルター：ホロライブ</p>
+              <p class="filter-text">選択中のフィルター：ホロライブ</p>
             {% elif request.GET.filter == "2" %}
-              <p class="filter-text">現在選択中のフィルター：にじさんじ</p>
+              <p class="filter-text">選択中のフィルター：にじさんじ</p>
             {% elif request.GET.filter == "3" %}
-              <p class="filter-text">現在選択中のフィルター：あにまーれ</p>
+              <p class="filter-text">選択中のフィルター：あにまーれ</p>
             {% elif request.GET.filter == "4" %}
-              <p class="filter-text">現在選択中のフィルター：.Live</p>
+              <p class="filter-text">選択中のフィルター：.Live</p>
             {% endif %}
           <div class="row">
             <div class="dropdown d-none d-sm-block mx-auto col-lg-8"> <!-- スマホ画面で非表示　d-none d-sm-block / 逆に表示する場合 d-block d-sm-none-->
               <button class="btn btn-ins btn-lg dropdown-toggle d-none d-sm-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                フィルターを選択
+                フィルター
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

@@ -82,6 +82,17 @@ nav {
 	text-align: center;
 }
 
+
+#menu-text#menu-text#menu-text#menu-text{
+	color: #ffffff;
+}
+
+.menu-dropdown{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color:#282828;
+}
+
 .dropdown{
 	margin-top: 10px;
 	margin-bottom: 10px;
