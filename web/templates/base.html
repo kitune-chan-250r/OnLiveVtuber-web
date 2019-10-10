@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OnliveVtuber</title>
+    <head>
+	<title>OnliveVtuber</title>
 	{% load static %}
 	{% bootstrap_css %}
 	{% bootstrap_javascript jquery='full' %}
@@ -14,11 +14,11 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149456660-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	    window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-	  gtag('config', 'UA-149456660-1');
+gtag('config', 'UA-149456660-1');
 	</script>
 	<script src="https://apis.google.com/js/platform.js"></script>
 	<!-- twitter card -->
@@ -30,46 +30,46 @@
 	<meta property="og:image" content="https://vlsapi-web.herokuapp.com/static/twittercard.2a7a71532dd2.png" />
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg sticky-top">
-		<div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-      	<li class="nav-item">
-   				<pre>         </pre>
-      	</li>
-      </ul>
-    </div>
+	    <div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+		    <li class="nav-item">
+			<pre>         </pre>
+		    </li>
+		</ul>
+	    </div>
 
-    <pre class="d-block d-sm-none">           </pre>
-   
-		<a class="navbar-brand mx-auto" href="/">
-			<img src="{% static "logo.png" %}">
-		</a>
-    <div class="navbar-collapse collapse" id="target">
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link title-text" href="vtuber">Vtuber一覧</a>
-        </li>
-      </ul>
-    </div>
+	    <pre class="d-block d-sm-none">           </pre>
 
-    <div class="navbar d-block d-sm-none">
-      <ul class="nav navbar-nav ml-auto">
-        <li class="dropdown">
-					<a href="#" class="dropdown-toggle menu-dropdown" data-toggle="dropdown" role="button" id="menu-text">menu</a>
-					<ul class="dropdown-menu dropdown-menu-right" role="menu">
-						<li><a href="/?filter=1" id="menu-text">ホロライブ</a></li>
-            <li><a href="/?filter=2" id="menu-text">にじさんじ</a></li>
-            <li><a href="/?filter=3" id="menu-text">あにまーれ</a></li>
-            <li><a href="/?filter=4" id="menu-text">.Live</a></li>
-            <li><a href="/" id="menu-text">フィルター解除</a></li>
-						<div class="dropdown-divider"></div>
-						<li><a href="vtuber" id="menu-text">Vtuber一覧</a></li>
-					</ul>
-				</li>
-      </ul>
-    </div>
+	    <a class="navbar-brand mx-auto" href="/">
+		<img src="{% static "logo.png" %}">
+	    </a>
+	    <div class="navbar-collapse collapse" id="target">
+		<ul class="nav navbar-nav ml-auto">
+		    <li class="nav-item">
+			<a class="nav-link title-text" href="vtuber">Vtuber一覧</a>
+		    </li>
+		</ul>
+	    </div>
+
+	    <div class="navbar d-block d-sm-none">
+		<ul class="nav navbar-nav ml-auto">
+		    <li class="dropdown">
+			<a href="#" class="dropdown-toggle menu-dropdown" data-toggle="dropdown" role="button" id="menu-text">menu</a>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu">
+			    <li><a href="?filter=1" id="menu-text">ホロライブ</a></li>
+			    <li><a href="?filter=2" id="menu-text">にじさんじ</a></li>
+			    <li><a href="?filter=3" id="menu-text">あにまーれ</a></li>
+			    <li><a href="?filter=4" id="menu-text">.Live</a></li>
+			    <li><a href="?filter=" id="menu-text">フィルター解除</a></li>
+			    <div class="dropdown-divider"></div>
+			    <li><a href="vtuber" id="menu-text">Vtuber一覧</a></li>
+			</ul>
+		    </li>
+		</ul>
+	    </div>
 	</nav>
-<body>
-	{% block content %}
-  {% endblock %}
-</body>
+	<body>
+	    {% block content %}
+	    {% endblock %}
+	</body>
 </html>
