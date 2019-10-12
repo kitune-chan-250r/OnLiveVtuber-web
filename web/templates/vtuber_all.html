@@ -32,6 +32,21 @@
                 {% include "v_content.html" %}
               {% endifequal %}
 
+            {% elif request.GET.filter == "5" %}
+              {% ifequal v.production 'ハニーストラップ' %}
+                {% include "v_content.html" %}
+              {% endifequal %}
+
+            {% elif request.GET.filter == "6" %}
+              {% ifequal v.production 'Re:AcT' %}
+                {% include "v_content.html" %}
+              {% endifequal %}
+            
+            {% elif request.GET.filter == "99" %}
+              {% ifequal v.production 'etc' %}
+                {% include "v_content.html" %}
+              {% endifequal %}
+
             {% else %}
             	{% include "v_content.html" %}
             {% endif %}
@@ -46,33 +61,15 @@
         <div class="container">
           <br>
           <br>
-            {% if request.GET.filter == "1" %}
-              <p class="filter-text">現在選択中のフィルター：ホロライブ</p>
-            {% elif request.GET.filter == "2" %}
-              <p class="filter-text">現在選択中のフィルター：にじさんじ</p>
-            {% elif request.GET.filter == "3" %}
-              <p class="filter-text">現在選択中のフィルター：あにまーれ</p>
-            {% elif request.GET.filter == "4" %}
-              <p class="filter-text">現在選択中のフィルター：.Live</p>
-            {% endif %}
-          <div class="row">
-            <div class="dropdown d-none d-sm-block mx-auto col-lg-8"> <!-- スマホ画面で非表示　d-none d-sm-block / 逆に表示する場合 d-block d-sm-none-->
-              <button class="btn btn-ins btn-lg dropdown-toggle d-none d-sm-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                フィルター
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="target">
-                <li><a href="/vtuber?filter=1" class="filter title-text">ホロライブ</a></li>
-                <li><a href="/vtuber?filter=2" class="filter title-text">にじさんじ</a></li>
-                <li><a href="/vtuber?filter=3" class="filter title-text">あにまーれ</a></li>
-                <li><a href="/vtuber?filter=4" class="filter title-text">.Live</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 btnleft">
-              <button type="button" class="btncolor btn btn-primaly d-none d-sm-block" onclick="location.href='/vtuber'">解除</button>
-            </div>
+          {% include "sidbar_filter.html" %}
+
+          <br>
+          <br>
+          <div class="d d-none d-sm-block">
+            <a href="about_this_page" class="title-text">About this site</a>
           </div>
         </div>
+        
       </div>
     
     </div>

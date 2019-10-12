@@ -26,3 +26,6 @@ def vtuber(request):
     data = {}
     data['vtuber'] = json_data
     return render(request, 'vtuber_all.html', data)
+
+def about_this_page(request):
+    return render(request, 'about_this_page.html')
