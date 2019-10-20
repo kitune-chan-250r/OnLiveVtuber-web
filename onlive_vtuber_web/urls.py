@@ -21,5 +21,5 @@ from django.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include('web.urls')),
-    url('', include('pwa.urls')), #pwa
+    path('', include('pwa.urls')), #pwa
 ]
