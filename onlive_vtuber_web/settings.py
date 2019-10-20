@@ -141,17 +141,17 @@ STATICFILES_DIRS = (
 #GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
 
 #pwa setting 
-PWA_APP_NAME = 'OnliveVtuber'
-PWA_APP_DESCRIPTION = "OnliveVtuber"
+PWA_APP_NAME = 'My App'
+PWA_APP_DESCRIPTION = "My app description"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
 PWA_APP_SCOPE = '/'
 PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = 'https://app-testserver.herokuapp.com'
+PWA_APP_START_URL = '/'
 PWA_APP_ICONS = [
     {
-        'src': '/static/images/icons/icon-144x144.png',
+        'src': '/static/images/my_app_icon.png',
         'sizes': '160x160'
     }
 ]
@@ -163,5 +163,4 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
-
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'web/templates', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'web', 'serviceworker.js')
