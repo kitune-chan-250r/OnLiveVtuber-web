@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web',
     'bootstrap4',
-    'pwa', #pwa setting
 ]
 
 MIDDLEWARE = [
