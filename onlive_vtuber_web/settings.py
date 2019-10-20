@@ -146,9 +146,9 @@ PWA_APP_DESCRIPTION = "OnliveVtuber"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = '/'
+PWA_APP_SCOPE = 'https://app-testserver.herokuapp.com/'
 PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/'
+PWA_APP_START_URL = 'https://app-testserver.herokuapp.com/'
 PWA_APP_ICONS = [
     {
         'src': '/static/images/icons/icon.png',
