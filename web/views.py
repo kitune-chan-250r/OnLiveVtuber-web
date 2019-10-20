@@ -29,8 +29,3 @@ def vtuber(request):
 
 def about_this_page(request):
     return render(request, 'about_this_page.html')
-
-#pwa
-def base_layout(request):
-    template='base.html'
-    return render(request, template)

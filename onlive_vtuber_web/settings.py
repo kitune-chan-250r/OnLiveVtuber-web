@@ -135,31 +135,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
 
-#pwa setting 
-PWA_APP_NAME = 'My App'
-PWA_APP_DESCRIPTION = "My app description"
-PWA_APP_THEME_COLOR = '#0A0302'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
-PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = '/'
-PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/'
-PWA_APP_ICONS = [
-    {
-        'src': '/static/images/icon-144x144.png',
-        'sizes': '160x160'
-    }
-]
-PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': '/static/images/icons/splash-640x1136.png',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
-]
-PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'en-US'
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'web', 'serviceworker.js')
