@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web',
     'bootstrap4',
+    'pwa', #pwa setting
 ]
 
 MIDDLEWARE = [
@@ -122,8 +123,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
-#ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ["*"]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -137,4 +138,30 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
+#GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
+
+#pwa setting 
+PWA_APP_NAME = 'OnliveVtuber'
+PWA_APP_DESCRIPTION = "OnliveVtuber"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/images/icons/icon.png',
+        'sizes': '568x568'
+    }
+]
+PWA_APP_SPLASH_SCREEN = [
+    {
+        'src': '/static/images/icons/splash-640x1136.png',
+        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'my_app', 'serviceworker.js')
