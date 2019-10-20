@@ -151,7 +151,7 @@ PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = 'https://app-testserver.herokuapp.com'
 PWA_APP_ICONS = [
     {
-        'src': '/static/images/icons/icon.png',
+        'src': '/static/images/icons/icon-128x128.png',
         'sizes': '568x568'
     }
 ]
