@@ -32,5 +32,5 @@ def about_this_page(request):
 
 #pwa
 def base_layout(request):
-    template='web/base.html'
-    return render(request,template)
+    template='base.html'
+    return render(request, template)
