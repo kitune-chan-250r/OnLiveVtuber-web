@@ -3,6 +3,7 @@ const CACHE_NAME = 'pwa-sample-caches-v1';
 // Cache targets
 const urlsToCache = [
   '/',
+  'https://app-testserver.herokuapp.com'
 ];
 
 self.addEventListener('install', (event) => {
