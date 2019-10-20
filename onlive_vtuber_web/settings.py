@@ -136,7 +136,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
 
@@ -151,7 +151,7 @@ PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = 'https://app-testserver.herokuapp.com'
 PWA_APP_ICONS = [
     {
-        'src': '/static/images/icons/icon-128x128.png',
+        'src': '/static/images/icons/icon-144x144.png',
         'sizes': '160x160'
     }
 ]
