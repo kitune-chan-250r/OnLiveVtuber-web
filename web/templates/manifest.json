@@ -7,7 +7,7 @@
   "start_url": "https://app-testserver.herokuapp.com",
   "icons": [
     {
-      "src": "images/icons/icon-144x144.png",
+      "src": "./icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     }
