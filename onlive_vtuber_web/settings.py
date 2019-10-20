@@ -152,7 +152,7 @@ PWA_APP_START_URL = 'https://app-testserver.herokuapp.com'
 PWA_APP_ICONS = [
     {
         'src': '/static/images/icons/icon-128x128.png',
-        'sizes': '568x568'
+        'sizes': '160x160'
     }
 ]
 PWA_APP_SPLASH_SCREEN = [
