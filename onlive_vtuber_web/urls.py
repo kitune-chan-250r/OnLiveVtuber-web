@@ -22,6 +22,7 @@ from django.views.decorators.cache import cache_control
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('web.urls')),
+    #pwa
     path('sw.js', (TemplateView.as_view(template_name="sw.js", 
   content_type='application/javascript', )), name='sw.js'),
 ]
