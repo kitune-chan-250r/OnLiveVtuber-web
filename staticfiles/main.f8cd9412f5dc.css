@@ -72,8 +72,7 @@ nav {
 }
 
 .logo,
-.filter,
-.filter-text {
+.filter{
 	text-align: center;
 }
 
@@ -83,7 +82,47 @@ nav {
 	text-align: center;
 }
 
+
+#menu-text#menu-text#menu-text#menu-text{
+	color: #ffffff;
+}
+
+.menu-dropdown{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color:#282828;
+}
+
 .dropdown{
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.filter-text{
+	color: #ffffff;
+	text-align: center;
+}
+
+.btnleft{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	margin-top: 13px;
+}
+
+.btncolor{
+	background-color: #3e3e3e; 
+	text-transform: none !important;
+}
+
+#all{
+	background-color: #1f1f1f;
+}
+
+.d{
+	text-align: center;
+}
+
+.comment{
+	color: #8899a6;
 }

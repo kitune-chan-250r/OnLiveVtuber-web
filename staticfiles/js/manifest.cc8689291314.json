@@ -1,0 +1,22 @@
+{
+  "background_color": "#1f1f1f",
+  "description": "VTuberの生放送一覧を手軽に確認できるアプリケーション",
+  "display": "standalone",
+  "theme_color": "aliceblue",
+  "icons": [{
+    "src": "icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },{
+    "src": "icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },{
+    "src": "icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "name": "OnliveVtuber",
+  "short_name": "OnliveVtuber",
+  "start_url": "https://app-testserver.herokuapp.com/?pwa=true"
+}
