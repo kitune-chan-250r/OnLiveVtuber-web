@@ -18,5 +18,5 @@
   }],
   "name": "OnliveVtuber",
   "short_name": "OnliveVtuber",
-  "start_url": "https://app-testserver.herokuapp.com"
+  "start_url": "https://vlsapi-web.herokuapp.com/?pwa=true"
 }
