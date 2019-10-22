@@ -79,13 +79,17 @@
 
 		<script>
 			if ('serviceWorker' in navigator) {
-			  window.addEventListener('load', function() {
-			    navigator.serviceWorker.register('sw.js').then(function(registration) {
-			      console.log('serviceWorker registed.', registration.scope);
-			    }, function(err) {
-			      console.log('serviceWorker error.', err);
-			    });
-			  });
+				// ServiceWorkerを登録
+				navigator.serviceWorker.register('sw.js', {
+					scope: './',
+				}).then(function(registration) {
+					// 登録成功時
+					console.log('登録成功です');
+				}).catch(function(error) {
+					// 登録失敗時
+					console.log('登録できませんでした');
+					console.log(error)
+				});
 			}
 		</script>
 
