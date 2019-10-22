@@ -79,18 +79,8 @@
 
 		<script>
 			if ('serviceWorker' in navigator) {
-				// ServiceWorkerを登録
-				navigator.serviceWorker.register('sw.js', {
-					scope: './',
-				}).then(function(registration) {
-					// 登録成功時
-					console.log('登録成功です');
-				}).catch(function(error) {
-					// 登録失敗時
-					console.log('登録できませんでした');
-					console.log(error)
-				});
-			}
+      			navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+   			}
 		</script>
 
 	</head>

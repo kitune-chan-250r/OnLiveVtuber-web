@@ -1,11 +1,7 @@
 {
-  "name": "OnliveVtuber",
-  "short_name": "OnliveVtuber",
-  "start_url": "https://app-testserver.herokuapp.com/",
+  "background_color": "purple",
+  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
   "display": "standalone",
-  "theme_color": "#161825",
-  "background_color": "#fff",
-  "description": "A simply readable Hacker News app.",
   "icons": [{
     "src": "icon-144x144.png",
     "sizes": "144x144",
@@ -18,5 +14,8 @@
     "src": "icon-512x512.png",
     "sizes": "512x512",
     "type": "image/png"
-  }]
+  }],
+  "name": "OnliveVtuber",
+  "short_name": "OnliveVtuber",
+  "start_url": "https://app-testserver.herokuapp.com"
 }
