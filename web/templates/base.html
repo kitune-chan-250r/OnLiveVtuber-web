@@ -78,22 +78,18 @@
 		</nav>
 
 		<script>
+			//pwa
 			if ('serviceWorker' in navigator) {
-		  navigator.serviceWorker.register('sw.js')
-		    .then(function() {
-		      console.log('Service worker registered!');
-		    });
-		}
+			  window.addEventListener('load', function() {
+			    navigator.serviceWorker.register('sw.js').then(function(registration) {
+			      console.log('serviceWorker registed.', registration.scope);
+			    }, function(err) {
+			      console.log('serviceWorker error.', err);
+			    });
+			  });
+			}
 		</script>
-		<script>
-			window.addEventListener('beforeinstallprompt', (e) => {
-			  // Prevent Chrome 76 and later from showing the mini-infobar
-			  e.preventDefault();
-			  // Stash the event so it can be triggered later.
-			  deferredPrompt = e;
-			  showInstallPromotion();
-			});
-		</script>
+
 	</head>
 	<body>
 	    {% block content %}

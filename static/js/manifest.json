@@ -3,6 +3,7 @@
   "short_name": "OnliveVtuber",
   "start_url": "https://app-testserver.herokuapp.com",
   "display": "standalone",
+  "theme_color": "#161825",
   "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
   "icons": [{
