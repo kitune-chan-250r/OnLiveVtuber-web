@@ -1,15 +1,15 @@
 {
-  "name": "OnliveVtuber",　//ここをサイト名に
-  "short_name": "OnliveVtuber", //ここをサイト名に
-  "theme_color": "#2196f3", //好きなカラーコードを設定
-  "background_color": "#2196f3", //好きなカラーコードを設定
-  "display": "standalone", //いじる必要なし
-  "scope": "/", //いじる必要なし
-  "start_url": "https://app-testserver.herokuapp.com",　//サイト名
+  "name": "OnliveVtuber",
+  "short_name": "OnliveVtuber",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://app-testserver.herokuapp.com",
   "icons": [{
-      "src": "./icon-144x144.png",　//下記サイズの画像ファイルのパスを記載
-      "sizes": "144x144",　//必要な画像サイズ
-      "type": "image/png"//いじる必要なし
+      "src": "./icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     }],
   "start_url": "https://app-testserver.herokuapp.com",
   "display": "standalone",
