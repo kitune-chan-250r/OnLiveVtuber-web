@@ -40,6 +40,11 @@
               {% ifequal d.production 'Re:AcT' %}
                 {% include "content_box.html" %}
               {% endifequal %}
+
+            {% elif request.GET.filter == "7" %}
+              {% ifequal d.production 'ENTUM' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
             
             {% elif request.GET.filter == "99" %}
               {% ifequal d.production 'etc' %}
