@@ -41,6 +41,11 @@
               {% ifequal v.production 'Re:AcT' %}
                 {% include "v_content.html" %}
               {% endifequal %}
+
+            {% elif request.GET.filter == "7" %}
+              {% ifequal v.production 'ENTUM' %}
+                {% include "v_content.html" %}
+              {% endifequal %}
             
             {% elif request.GET.filter == "99" %}
               {% ifequal v.production 'etc' %}
