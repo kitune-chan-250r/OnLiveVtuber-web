@@ -51,6 +51,11 @@
               {% ifequal v.production 'ホロスターズ' %}
                 {% include "v_content.html" %}
               {% endifequal %}
+
+            {% elif request.GET.filter == "9" %}
+              {% ifequal v.production 'ぶいすぽ' %}
+                {% include "v_content.html" %}
+              {% endifequal %}
             
             {% elif request.GET.filter == "99" %}
               {% ifequal v.production 'etc' %}
