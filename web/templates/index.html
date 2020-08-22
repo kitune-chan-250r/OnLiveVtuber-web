@@ -50,6 +50,11 @@
               {% ifequal d.production 'ホロスターズ' %}
                 {% include "content_box.html" %}
               {% endifequal %}
+
+            {% elif request.GET.filter == "9" %}
+              {% ifequal d.production 'ぶいすぽ' %}
+                {% include "content_box.html" %}
+              {% endifequal %}
             
             {% elif request.GET.filter == "99" %}
               {% ifequal d.production 'etc' %}

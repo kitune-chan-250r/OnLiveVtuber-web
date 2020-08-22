@@ -15,6 +15,8 @@
     <p class="filter-text">現在選択中のフィルター：ENTUM</p>
   {% elif request.GET.filter == "8" %}
     <p class="filter-text">現在選択中のフィルター：ホロスターズ</p>
+  {% elif request.GET.filter == "9" %}
+    <p class="filter-text">現在選択中のフィルター：ぶいすぽ</p>
   {% elif request.GET.filter == "99" %}
     <p class="filter-text">現在選択中のフィルター：その他/個人勢</p>
   {% endif %}
@@ -34,6 +36,7 @@
         <li><a href="?filter=6" class="filter title-text">Re:AcT</a></li>
         <li><a href="?filter=7" class="filter title-text">ENTUM</a></li>
         <li><a href="?filter=8" class="filter title-text">ホロスターズ</a></li>
+        <li><a href="?filter=9" class="filter title-text">ぶいすぽ</a></li>
         <li><a href="?filter=99" class="filter title-text">その他/個人勢</a></li>
       </ul>
     </div>
