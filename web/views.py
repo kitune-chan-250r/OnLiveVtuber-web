@@ -56,5 +56,27 @@ def vtuber(request):
     data['vtuber'] = json_data
     return render(request, 'vtuber_all.html', data)
 
+def reminder(request):
+    json_data = vlsa.get(BASE_URL + 'reminder/')
+    
+    data = {}
+    reminder_data = []
+
+    for i in json_data:
+        #past = deformed(i['start_time'])'past_time': past,
+        livedata.append({'liver_name': i['uid']['liver_name'],
+                         'live_url': i['live_url'].replace('https://www.youtube.com/watch?v=', ''),
+                         'live_title': i['live_title'],
+                         'gender': i['uid']['gender'],
+                         'production': i['uid']['production'],
+                         'audience':i['audience'],
+                         'start_datetime':i['start_datetime']})
+
+    data['livedata'] = livedata
+    print(data)
+    return render(request, 'index.html', data)
+
+
+
 def about_this_page(request):
     return render(request, 'about_this_page.html')
