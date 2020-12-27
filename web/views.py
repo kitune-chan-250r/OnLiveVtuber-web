@@ -74,7 +74,7 @@ def reminder(request):
 
     data['reminder_data'] = reminder_data
     print(data)
-    return render(request, 'index.html', data)
+    return render(request, 'index_reminder.html', data)
 
 
 
