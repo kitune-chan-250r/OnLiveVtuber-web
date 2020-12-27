@@ -64,7 +64,7 @@ def reminder(request):
 
     for i in json_data:
         #past = deformed(i['start_time'])'past_time': past,
-        livedata.append({'liver_name': i['uid']['liver_name'],
+        reminder_data.append({'liver_name': i['uid']['liver_name'],
                          'live_url': i['live_url'].replace('https://www.youtube.com/watch?v=', ''),
                          'live_title': i['live_title'],
                          'gender': i['uid']['gender'],
@@ -72,7 +72,7 @@ def reminder(request):
                          'audience':i['audience'],
                          'start_datetime':i['start_datetime']})
 
-    data['livedata'] = livedata
+    data['reminder_data'] = reminder_data
     print(data)
     return render(request, 'index.html', data)
 
