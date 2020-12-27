@@ -51,7 +51,7 @@ def index(request):
     return render(request, 'index.html', data)
 
 def vtuber(request):
-    json_data = vlsa.get(BASE_URL)
+    json_data = vlsa.get(BASE_URL + 'vtuber/')
     data = {}
     data['vtuber'] = json_data
     return render(request, 'vtuber_all.html', data)
