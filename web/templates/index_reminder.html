@@ -9,55 +9,55 @@
       <div class="col-lg-6">
         <br>
         <br>
-        {% if livedata %}
-          {% for d in livedata reversed %}
+        {% if reminder_data %}
+          {% for d in reminder_data reversed %}
             {% if request.GET.filter == "1" %}
               {% ifequal d.production 'ホロライブ' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "2" %}
               {% ifequal d.production 'にじさんじ' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "3" %}
               {% ifequal d.production 'あにまーれ' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "4" %}
               {% ifequal d.production '.Live' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "5" %}
               {% ifequal d.production 'ハニーストラップ' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "6" %}
               {% ifequal d.production 'Re:AcT' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "7" %}
               {% ifequal d.production 'ENTUM' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% elif request.GET.filter == "8" %}
               {% ifequal d.production 'ホロスターズ' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
             
             {% elif request.GET.filter == "99" %}
               {% ifequal d.production 'etc' %}
-                {% include "content_box.html" %}
+                {% include "content_box_reminder.html" %}
               {% endifequal %}
 
             {% else %}
-              {% include "content_box.html" %}
+              {% include "content_box_reminder.html" %}
             {% endif %}
           
           {% endfor %}
@@ -73,7 +73,7 @@
             {% include "sidbar_filter.html" %}
           <br>
           <div class="d d-none d-sm-block">
-            <a href="reminder" class='title-text'>これから放送予定の枠</a>
+            <a href="/" class='title-text'>放送中の枠</a>
           </div>
         </div>
         </div>

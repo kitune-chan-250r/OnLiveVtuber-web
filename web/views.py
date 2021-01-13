@@ -3,6 +3,7 @@ import re, time
 from web import Vtuber_LiveStatus_API_lib as vlsa
 from datetime import timedelta
 from datetime import datetime
+from datetime import timezone as tz
 from dateutil.parser import parse
 from pytz import timezone
 
@@ -31,6 +32,19 @@ def deformed(start):
     else:
         return '約{}分'.format(minutes)
 
+def will_start(unixtime):
+    date = datetime.fromtimestamp(int(unixtime), tz(timedelta(hours=9)))
+    now = datetime.now(tz(timedelta(hours=9)))
+    gap = date - now
+
+    hours = int(gap.seconds / 3600)
+    minutes = int(gap.seconds / 60) % 60
+
+    if hours > 0:
+        return '約{}時間'.format(hours)
+    else:
+        return '約{}分'.format(minutes)
+
 def index(request):
     json_data = vlsa.get(BASE_URL + 'onlive/')
     
@@ -51,10 +65,33 @@ def index(request):
     return render(request, 'index.html', data)
 
 def vtuber(request):
-    json_data = vlsa.get(BASE_URL)
+    json_data = vlsa.get(BASE_URL + 'vtuber/')
     data = {}
     data['vtuber'] = json_data
     return render(request, 'vtuber_all.html', data)
+
+def reminder(request):
+    json_data = vlsa.get(BASE_URL + 'reminder/')
+    
+    data = {}
+    reminder_data = []
+
+    for i in json_data:
+        #past = deformed(i['start_time'])'past_time': past,
+        start_left = will_start(i['start_datetime'])
+        reminder_data.append({'liver_name': i['uid']['liver_name'],
+                         'live_url': i['live_url'].replace('https://www.youtube.com/watch?v=', ''),
+                         'live_title': i['live_title'],
+                         'gender': i['uid']['gender'],
+                         'production': i['uid']['production'],
+                         'audience':i['audience'],
+                         'start_datetime':start_left})
+
+    data['reminder_data'] = reminder_data
+    print(data)
+    return render(request, 'index_reminder.html', data)
+
+
 
 def about_this_page(request):
     return render(request, 'about_this_page.html')
