@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web',
     'bootstrap4',
-    'brave_verification', #brave rewards
+    #'brave_verification', #brave rewards
 ]
 
 MIDDLEWARE = [
@@ -138,7 +138,7 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
+#GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
 
 #brave rewards
 WELLKNOWN_SECURITY_CONTACT = (
