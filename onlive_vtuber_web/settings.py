@@ -142,7 +142,6 @@ GOOGLE_ANALYTICS_TRACKING_ID = os.environ["GOOGLE_ANALYTICS_TRACKING_ID"]
 
 #brave rewards
 WELLKNOWN_SECURITY_CONTACT = (
-  'brave-rewards-verification.txt'
   'This is a Brave Rewards publisher verification file.',
   'Domain: vlsapi-web.herokuapp.com',
   'Token: 06e7f58168f0af0de1bb1b82ac3034011b05307ed850afad247a598828688e5b'
