@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web',
     'bootstrap4',
-    'wellknown_security', #brave rewards
+    'brave_verification', #brave rewards
 ]
 
 MIDDLEWARE = [
