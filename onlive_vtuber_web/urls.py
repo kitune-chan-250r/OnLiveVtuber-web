@@ -26,6 +26,5 @@ urlpatterns = [
     path('sw.js', (TemplateView.as_view(template_name="sw.js", 
   content_type='application/javascript', )), name='sw.js'),
     #brave rewards
-    path('.well-known/', TemplateView.as_view(template_name='brave-rewards-verification.txt',
-     content_type='text/plain')),
+    path('.well-known/', include('wellknown_security.urls')),
 ]
